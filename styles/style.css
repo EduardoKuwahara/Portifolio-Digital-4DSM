@@ -118,8 +118,16 @@ header {
 .subtitle {
     font-size: 1.5rem;
     color: #4a5568;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
     font-weight: 500;
+}
+
+.subtitle-secondary {
+    font-size: 1.125rem;
+    color: #718096;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    font-style: italic;
 }
 
 .description {
@@ -322,9 +330,153 @@ header {
     margin-top: 1rem;
 }
 
-.btn-projeto:hover {
+.projeto-card.destacado {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    transform: scale(1.02);
+    position: relative;
+}
+
+.projeto-card.destacado::before {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.projeto-card.destacado h3,
+.projeto-card.destacado strong {
+    color: white;
+}
+
+.projeto-card.destacado p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.projeto-badge {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    background: #48bb78;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(72, 187, 120, 0.3);
+}
+
+.projeto-parceiro {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    border-left: 4px solid rgba(255, 255, 255, 0.3);
+}
+
+.projeto-contrib-detalhada {
+    margin: 1.5rem 0;
+}
+
+.projeto-contrib-detalhada ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0.5rem;
+}
+
+.projeto-contrib-detalhada li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.projeto-contrib-detalhada li::before {
+    content: '🔹';
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.projeto-card.destacado .btn-projeto {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    backdrop-filter: blur(10px);
+}
+
+.projeto-card.destacado .btn-projeto:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skill-category {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.skill-category h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: relative;
+}
+
+.skill-category h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 1px;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+}
+
+.skill-tag {
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+    color: #4a5568;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.skill-tag:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
 }
 
 /* Footer */
@@ -402,6 +554,25 @@ footer p {
     .projeto-card {
         padding: 2rem;
     }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .skill-category {
+        padding: 1.5rem;
+    }
+    
+    .projeto-badge {
+        position: static;
+        display: inline-block;
+        margin-bottom: 1rem;
+    }
+    
+    .projeto-contrib-detalhada li {
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -417,6 +588,10 @@ footer p {
         font-size: 1.25rem;
     }
     
+    .subtitle-secondary {
+        font-size: 1rem;
+    }
+    
     .profile-img {
         width: 200px;
         height: 200px;
@@ -424,5 +599,14 @@ footer p {
     
     .section h2 {
         font-size: 1.75rem;
+    }
+    
+    .projeto-card.destacado {
+        transform: none;
+    }
+    
+    .skill-tag {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
     }
 }
