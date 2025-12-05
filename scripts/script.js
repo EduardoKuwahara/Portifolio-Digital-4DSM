@@ -1,6 +1,4 @@
-// Smooth scrolling para links de navegação
 document.addEventListener('DOMContentLoaded', function() {
-    // Seleciona todos os links de navegação
     const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
     
     navLinks.forEach(link => {
@@ -22,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Efeito de scroll no header
     const header = document.querySelector('header');
     let lastScrollTop = 0;
     
@@ -40,7 +37,6 @@ document.addEventListener('DOMContentLoaded', function() {
         lastScrollTop = currentScroll;
     });
     
-    // Animação de entrada dos elementos
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -55,7 +51,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
     
-    // Observar elementos para animação
     const animatedElements = document.querySelectorAll('.projeto-card, .interesse-item, .dados-content');
     animatedElements.forEach(el => {
         el.style.opacity = '0';
@@ -64,7 +59,6 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(el);
     });
     
-    // Typing effect para o título principal
     const title = document.querySelector('.hero-text h1');
     if (title) {
         const text = title.textContent;
@@ -87,7 +81,6 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(typeWriter, 500);
     }
     
-    // Parallax effect para a imagem de perfil
     const profileImg = document.querySelector('.profile-img');
     if (profileImg) {
         window.addEventListener('scroll', () => {
@@ -98,14 +91,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Função para copiar email para clipboard
 function copyEmail(event) {
-    // Prevenir o comportamento padrão do mailto
     event.preventDefault();
     
     const email = 'eduardokuwaharajr57@gmail.com';
     navigator.clipboard.writeText(email).then(() => {
-        // Criar notificação de sucesso
         const notification = document.createElement('div');
         notification.textContent = 'Email copiado para a área de transferência!';
         notification.style.cssText = `
@@ -136,7 +126,6 @@ function copyEmail(event) {
             }, 300);
         }, 3000);
     }).catch(() => {
-        // Fallback: abrir cliente de email
         window.location.href = 'mailto:eduardokuwaharajr57@gmail.com';
     });
 }
