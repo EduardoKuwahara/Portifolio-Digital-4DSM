@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduardo Kuwahara Junior - Portfolio</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <h1 class="nav-title">Eduardo Kuwahara Junior</h1>
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#dados">Dados Pessoais</a>
+                    <a href="#interesses">Interesses</a>
+                    <a href="#projetos">Projetos</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Eduardo Kuwahara Junior</h1>
+                    <p class="subtitle">Desenvolvedor Frontend & Backend</p>
+                    <p class="description">
+                        Desenvolvedor apaixonado por tecnologia, com experiência em desenvolvimento web full-stack,
+                        sempre buscando criar soluções inovadoras e eficientes.
+                    </p>
+                </div>
+                <div class="hero-image">
+                    <img src="images/profile.jpg" alt="Minha Foto" class="profile-img">
+                </div>
+            </div>
+        </section>
+
+        <section id="dados" class="section">
+            <div class="container">
+                <h2>Dados Pessoais</h2>
+                <div class="dados-content">
+                    <div class="dado-item">
+                        <strong>Nome:</strong> Eduardo Kuwahara Junior
+                    </div>
+                    <div class="dado-item">
+                        <strong>Email:</strong> 
+                        <a href="mailto:eduardokuwaharajr57@gmail.com" onclick="copyEmail(event)">eduardokuwaharajr57@gmail.com</a>
+                    </div>
+                    <div class="dado-item">
+                        <strong>Telefone:</strong> (12) 98148-1559
+                    </div>
+                    <div class="dado-item">
+                        <strong>LinkedIn:</strong> 
+                        <a href="https://www.linkedin.com/in/eduardo-kuwahara-junior-3b2267303?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Entre em contato</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="interesses" class="section">
+            <div class="container">
+                <h2>Interesses e Hobbies</h2>
+                <div class="interesses-grid">
+                    <div class="interesse-item">
+                        <span class="icon">💻</span>
+                        <span>Desenvolvimento Web</span>
+                    </div>
+                    <div class="interesse-item">
+                        <span class="icon">🗄️</span>
+                        <span>Banco de Dados</span>
+                    </div>
+                    <div class="interesse-item">
+                        <span class="icon">⚽</span>
+                        <span>Esportes</span>
+                    </div>
+                    <div class="interesse-item">
+                        <span class="icon">🔬</span>
+                        <span>Biologia e Astronomia</span>
+                    </div>
+                    <div class="interesse-item">
+                        <span class="icon">🎭</span>
+                        <span>Artes Cênicas</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos" class="section">
+            <div class="container">
+                <h2>Projetos</h2>
+                <div class="projetos-grid">
+                    <div class="projeto-card">
+                        <h3>Projeto Smart-Farming</h3>
+                        <p class="projeto-resumo">
+                            <strong>Resumo:</strong> Sistema de Monitoramento e Análise de Estufa Inteligente.
+                        </p>
+                        <p class="projeto-tech">
+                            <strong>Tecnologias:</strong> Python, Flask, AWS, JavaScript, MySQL.
+                        </p>
+                        <p class="projeto-contrib">
+                            <strong>Contribuições:</strong> Desenvolvimento da API, UI e UX, Product Owner.
+                        </p>
+                        <a href="https://github.com/CyberScrums/Projeto-Smart-Farming" target="_blank" class="btn-projeto">
+                            Ver no GitHub
+                        </a>
+                    </div>
+
+                    <div class="projeto-card">
+                        <h3>Projeto ProStock</h3>
+                        <p class="projeto-resumo">
+                            <strong>Resumo:</strong> Sistema de Gestão de Estoque.
+                        </p>
+                        <p class="projeto-tech">
+                            <strong>Tecnologias:</strong> Node.js, React, Tailwind CSS, TypeScript, JavaScript.
+                        </p>
+                        <p class="projeto-contrib">
+                            <strong>Contribuições:</strong> UX e UI, Desenvolvimento Front, Dev Team.
+                        </p>
+                        <a href="https://github.com/EquipeSkyfall/API_2Semestre" target="_blank" class="btn-projeto">
+                            Ver no GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Eduardo Kuwahara Junior - Todos os Direitos Reservados</p>
+        </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "eduardo-kuwahara-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio pessoal de Eduardo Kuwahara Junior - Desenvolvedor Frontend & Backend",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 8000",
+    "start": "python -m http.server 8000",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "portfolio",
+    "frontend",
+    "backend",
+    "developer",
+    "eduardo-kuwahara"
+  ],
+  "author": "Eduardo Kuwahara Junior <eduardokuwaharajr57@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eduardokuwahara/portfolio"
+  },
+  "homepage": "https://eduardokuwahara.vercel.app"
+}
